@@ -1,0 +1,52 @@
+<details open><summary><strong>Which Python version is this for?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Everything should work in the latest Python version, which is 3.12. Every feature that requires version higher than 3.9 has that mentioned in comments or brackets. There are only two such features, both requiring 3.10.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;As of 12th March 2024, the only libraries whose latest version requires Python version higher than 3.8 are: numpy, pandas and matplotlib. They all require Python 3.9. This cheatsheet covers numpy version 2.0 (or higher) that was released on 16th June, 2024 and pandas version 2.0 (or higher) that was released on 3rd April 2023.
+</details><br>
+
+<details open><summary><strong>How to use it?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;This cheatsheet consists of minimal text and short examples so things are easy to find with <code>Ctrl+F</code> / <code>⌘F</code>. If you're on the webpage, searching for <code>'#&lt;name&gt;'</code> will only search for the titles. To get a link to a specific section click the grey hashtag next to the section's title before copying the address. To search for titles in the text editor use <code>^&lt;name&gt;</code> with enabled regular expressions option.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;I also keep the Python console open at all times to test little snippets of code, to check out the available functions of a module using code completion and above all, to use <code>help(&lt;module/object/function/type/str&gt;)</code> command. If something is still unclear, then I search the Python docs by googling <code>'python docs &lt;module/function&gt;'</code>.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Recently I started using the ptpython REPL (Python console). It supports multiline editing, syntax validation, IDE-like autocompletion and syntax highlighting. It can be installed with <code>pip3 install ptpython</code>. Even more recently I switched to ipython REPL, which is very similar to ptpython only more responsive. It can be installed with <code>pip3 install ipython</code>.
+</details><br>
+
+<details open><summary><strong>What does the '&lt;type&gt;' signify?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;It is a placeholder for an object. It needs to be replaced by an expression, literal or a variable that returns/is of that type. However, if it is located on the left side of an assignment (<code>=</code>) then it signifies what type of object is produced/returned by the expression on the right side of the assignment.
+</details><br>
+
+<details open><summary><strong>Why the '&lt;type&gt;' semantics?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;It makes examples much less ambiguous.
+</details><br>
+
+<details open><summary><strong>What exactly is <code>&lt;el&gt;</code>?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;El is short for element and can be any object, but it usually denotes an object that is an item of a collection.
+</details><br>
+
+<details open><summary><strong>What exactly is <code>&lt;collection&gt;</code>?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Collection is my name for an iterable object. An iterable object in Python is any object that has at least one of iter() and getitem() special methods defined. By convention, <code>&lt;object&gt;.__iter__()</code> should return an iterator of object's items and <code>&lt;object&gt;.__getitem__(&lt;index&gt;)</code> an item at that index. I chose not to use the name iterable because it sounds scarier and more vague than collection, even though it has a precise definition.<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;To make matters a bit more confusing, an abstract base class called Iterable doesn't fully follow this definition. An expression <code>instanceof(&lt;object&gt;, collections.abc.Iterable)</code> only checks whether an object has iter() special method, disregarding the getitem().<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Although collection has no definition in Python's <a href="https://docs.python.org/3/glossary.html">glossary</a>, there exists a Collection abstract base class. Expression <code>instanceof(&lt;object&gt;, collections.abc.Collection)</code> returns 'True' for any object that has len(), iter() and contains() special methods defined. <code>&lt;object&gt;.__len__()</code> should return the number of elements and <code>&lt;object&gt;.__contains__(&lt;el&gt;)</code> should check if object contains the passed element.
+</details><br>
+
+<details open><summary><strong>What about PEP 8?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Check out <a href="https://google.github.io/styleguide/pyguide.html">Google Style Guide</a> and use <code>Ctrl+Alt+L</code> / <code>⌥⌘L</code> shortcut in PyCharm to automatically reformat code.
+</details><br>
+
+<details open><summary><strong>Why are there no blank lines between method definitions?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;This way classes can be copy-pasted into the Python console, which would otherwise raise IndentationError.
+</details><br>
+
+<details open><summary><strong>Why are tests not covered?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Check out <a href="https://docs.python-guide.org/writing/tests/">The Hitchhiker’s Guide to Python</a> for a nice overview.
+</details><br>
+
+<details open><summary><strong>Django?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Here is a nice <a href="https://github.com/kickstartcoding/cheatsheets/blob/master/build/topical/django.jpg">Django cheatsheet</a>.
+</details><br>
+
+<details open><summary><strong>Why are there no concrete Regex examples?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Regular expressions are a separate technology that is independent from Python. There are many resources available online.
+</details><br>
+
+<details open><summary><strong>Why are descriptors not covered?</strong></summary><br>
+&nbsp;&nbsp;&nbsp;&nbsp;Because property decorator is sufficient for everyday use.
+</details><br>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="ocks-org do-not-copy" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Comprehensive Python Cheatsheet</title>
+  <meta name="description" content="Exhaustive, simple, beautiful and concise. A truly Pythonic cheat sheet about Python programming language.">
+  <link rel="icon" href="web/favicon.png">
+
+  <link rel="stylesheet" href="web/default.min.css">
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  <link rel="stylesheet" href="web/style.css">
+
+  <script>
+    // Uses dark theme 3 if it's specified in query string orbrowser prefers dark mode and 
+    // theme is not explicitly set.
+    if ((window.location.search.search(/[?&]theme=dark3/) !== -1) || ((window.location.search.search(/[?&]theme=/) == -1) && (window.matchMedia('(prefers-color-scheme: dark)').matches))) {
+      document.write("<link rel=\"stylesheet\" href=\"web/default_dark3.min.css\">");
+      document.write("<link rel=\"stylesheet\" href=\"web/style_dark3.css\">");
+    }
+    else if (window.location.search.search(/[?&]theme=dark2/) !== -1) {
+      document.write("<link rel=\"stylesheet\" href=\"web/default_dark2.min.css\">");
+      document.write("<link rel=\"stylesheet\" href=\"web/style_dark2.css\">");
+    }
+    else if (window.location.search.search(/[?&]theme=dark1/) !== -1) {
+      document.write("<link rel=\"stylesheet\" href=\"web/default_dark1.min.css\">");
+      document.write("<link rel=\"stylesheet\" href=\"web/style_dark1.css\">");
+    }    
+    else if (window.location.search.search(/[?&]theme=dark/) !== -1) {
+      document.write("<link rel=\"stylesheet\" href=\"web/default_dark.min.css\">");
+      document.write("<link rel=\"stylesheet\" href=\"web/style_dark.css\">");
+    }
+  </script>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comprehensive Python Cheatsheet">
+  <meta name="twitter:description" content="Exhaustive, simple, beautiful and concise. A truly Pythonic cheat sheet about Python programming language.">
+  <meta name="twitter:image" content="https://gto76.github.io/python-cheatsheet/web/image_social_4.png">
+
+  <meta property="og:url" content="https://gto76.github.io/python-cheatsheet/">
+  <meta property="og:title" content="Comprehensive Python Cheatsheet">
+  <meta property="og:description" content="Exhaustive, simple, beautiful and concise. A truly Pythonic cheat sheet about Python programming language.">
+  <meta property="og:site_name" content="gto76.github.io">
+  <meta property="og:image" content="https://gto76.github.io/python-cheatsheet/web/image_social_4.png">
+  <meta property="og:type" content="article">
+
+  <meta itemprop="url" content="https://gto76.github.io/python-cheatsheet/">
+  <meta itemprop="name" content="Comprehensive Python Cheatsheet">
+  <meta itemprop="description" content="Exhaustive, simple, beautiful and concise. A truly Pythonic cheat sheet about Python programming language.">
+  <meta itemprop="image" content="https://gto76.github.io/python-cheatsheet/web/image_social_4.png">
+
+  <meta name="google-site-verification" content="w3rvuG0D1kUm_w20qsJecSEZh59Am8jK4eSPVU83e_M">
+  <meta name="viewport" id="viewport-meta">
+</head>
+
+<body>
+  <header>
+    <aside>May 20, 2021</aside>
+    <a href="https://gto76.github.io" rel="author">Jure Šorn</a>
+  </header>
+
+  <div id=main_container></div>
+
+  <footer>
+    <aside>May 20, 2021</aside>
+    <a href="https://gto76.github.io" rel="author">Jure Šorn</a>
+  </footer>
+
+  <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+  <script src="web/jquery-3.4.0.min.js"></script>
+  <script src="web/script_2.js"></script>
+  <script type="text/javascript" src="https://transactions.sendowl.com/assets/sendowl.js" ></script>
+  <script src="web/plotly.min.js"></script>
+  <script src="web/covid_deaths.js"></script>
+  <script src="web/covid_cases.js"></script>
+</body>
+
+</html>
